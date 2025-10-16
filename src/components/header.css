@@ -1,0 +1,54 @@
+/* Container general */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  padding: 20px 0;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 2px 2px 0px #ff1744;
+  font-family: 'Press Start 2P', cursive;
+}
+
+/* Navegación */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff6b9d;
+  text-shadow: 0 0 10px #ff6b9d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+}

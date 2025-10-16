@@ -1,0 +1,88 @@
+/* Si ya tienes .container definido en otro CSS, puedes eliminar la sección .container de aquí */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Footer general */
+.site-footer {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 32px 0;
+  backdrop-filter: blur(10px);
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 40px;
+}
+
+/* Centrado interno */
+.footer-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenido principal en columnas (desktop) */
+.footer-content {
+  display: flex;
+  flex-direction: column; /* por defecto en columna */
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+/* Texto */
+.site-footer .copyright {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+}
+
+/* Enlaces sociales */
+.social-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 6px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+/* Hover / focus */
+.social-link:hover,
+.social-link:focus {
+  transform: translateY(-4px) scale(1.04);
+  background: linear-gradient(45deg, #ff6b9d, #ff1744);
+  box-shadow: 0 12px 30px rgba(255, 23, 68, 0.22);
+  outline: none;
+}
+
+/* Responsive: en pantallas grandes poner contenido en fila */
+@media (min-width: 768px) {
+  .footer-inner {
+    justify-content: space-between;
+  }
+
+  .footer-content {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  .social-links {
+    margin-top: 0;
+  }
+}
